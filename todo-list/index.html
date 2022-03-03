@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="section-center">
+        <form autocomplete="off" action="" class="todo-form">
+            <p class="alert"></p>
+            <h3>ToDo List</h3>
+            <div class="form-control">
+                <input type="text" id="todo" class="input-form" placeholder="Write some stuff here!">
+                <button class="submit-btn" type="submit">submit</button>
+            </div>
+        </form>
+        <div class="todo-container">
+            <div class="todo-list">
+            </div>
+            <button class="clear-btn">clear all completed tasks</button>
+        </div>
+    </section>
+    <template id="template">
+        <article class="todo-item">
+            <span class="title">item</span>
+            <div class="btn-container">
+                <button type="button" class="complete-btn" title="Is done?">✔️</button>
+                <button type="button" class="edit-btn" title="Edit task">🖊️</button>
+                <button type="button" class="delete-btn" title="Delete task">🗑️</button>
+            </div>
+        </article>
+    </template>
+    <script src="main.js"></script>
+</body>
+
+</html>

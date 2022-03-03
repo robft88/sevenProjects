@@ -1,0 +1,160 @@
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #f9fffb;
+}
+
+h3,
+h4 {
+  text-align: center;
+  margin: 0;
+  font-weight: 900;
+}
+
+p {
+  margin: 0;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px 1px #00000062;
+}
+
+@media screen and (max-width: 768px) {
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+input {
+  padding: 1em;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background-color: #3e8e5611;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #3e8e56;
+  font-weight: 900;
+}
+
+.section-center {
+  width: 50%;
+  margin: 5em auto;
+  background-color: white;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 1px #00000062;
+}
+
+@media screen and (max-width: 600px) {
+  .section-center {
+    width: 95%;
+  }
+}
+
+.form-control {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  padding: 1em 0;
+}
+
+.input-form {
+  flex: 4;
+}
+
+.item-none {
+  padding: 1em;
+  text-align: center;
+}
+
+.item-done {
+  text-decoration: line-through;
+  background-color: #69f694;
+}
+
+.submit-btn {
+  text-transform: capitalize;
+  flex: 1;
+  background-color: #3e8e5650;
+  border-radius: 0 5px 5px 0;
+  padding: 1em;
+  transition: all 0.5s ease;
+}
+
+.submit-btn:hover {
+  background-color: #3e8e5638;
+  transition: all 0.5s ease;
+}
+
+.alert {
+  display: inline-block;
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  height: 0;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.alert-error {
+  height: 14px;
+  background-color: rgba(153, 0, 0, 0.25);
+  color: rgb(153, 0, 0);
+  margin: 0 0 2em 0;
+  padding: 0.5em;
+}
+
+.alert-success {
+  height: 14px;
+  background-color: rgb(0, 121, 0, 0.25);
+  color: rgb(0, 121, 0);
+  padding: 0.5em;
+  margin: 0 0 2em 0;
+}
+.todo-item {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  border-bottom: thin solid #00000062;
+}
+
+.clear-btn{
+  cursor: pointer;
+  text-transform: capitalize;
+  border: thin solid #3e8e56;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 1em 0 0 0;
+  text-align: center;
+}
+
+button:disabled{
+  display: none;
+}

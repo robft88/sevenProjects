@@ -1,0 +1,210 @@
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #f9fffb;
+}
+h2,
+h3 {
+  margin: 0;
+  font-weight: 900;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.navbar {
+  background-color: #f9fffb;
+  padding: 1.5em;
+  box-shadow: 3px 3px 5px 1px #00000062;
+  color: black;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-header {
+  text-shadow: 1px 2px 4px #00000062;
+  flex: 1;
+}
+.title-span {
+  color: #3e8e56;
+}
+.links-navbar {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .links-navbar {
+    display: none;
+  }
+}
+.links-navbar a:hover {
+  color: #3e8e56;
+}
+main {
+  margin: 8em auto 0 auto;
+  text-transform: capitalize;
+}
+.sidebar.active {
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  z-index: 99;
+  transform: translateX(0%);
+  transition: all 0.9s ease;
+}
+.sidebar {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  z-index: 99;
+  transform: translateX(-100%);
+  transition: all 0.9s ease;
+}
+@media screen and (min-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+.links-sidebar {
+  overflow-x: hidden;
+  width: inherit;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.links-sidebar li {
+  cursor: pointer;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  width: inherit;
+  transition: all 0.5s ease;
+}
+.links-sidebar li:hover {
+  background-color: #00000009;
+  transition: all 0.5s ease;
+  color: #3e8e56;
+}
+.hamburger {
+  z-index: 100;
+  padding: 15px 15px;
+  display: none;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: inline-block;
+  }
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+.hamburger--emphatic {
+  overflow: hidden;
+}
+.hamburger--emphatic .hamburger-inner {
+  transition: background-color 0.125s 0.175s ease-in;
+}
+.hamburger--emphatic .hamburger-inner::before {
+  left: 0;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+    top 0.05s 0.125s linear, left 0.125s 0.175s ease-in;
+}
+.hamburger--emphatic .hamburger-inner::after {
+  top: 10px;
+  right: 0;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+    top 0.05s 0.125s linear, right 0.125s 0.175s ease-in;
+}
+.hamburger--emphatic.is-active .hamburger-inner {
+  transition-delay: 0s;
+  transition-timing-function: ease-out;
+  background-color: transparent !important;
+}
+.hamburger--emphatic.is-active .hamburger-inner::before {
+  left: -80px;
+  top: -80px;
+  transform: translate3d(80px, 80px, 0) rotate(45deg);
+  transition: left 0.125s ease-out, top 0.05s 0.125s linear,
+    transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.hamburger--emphatic.is-active .hamburger-inner::after {
+  right: -80px;
+  top: -80px;
+  transform: translate3d(-80px, 80px, 0) rotate(-45deg);
+  transition: right 0.125s ease-out, top 0.05s 0.125s linear,
+    transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}

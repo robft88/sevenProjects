@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="products">
+        <div class="title">
+            <h2>our menu</h2>
+            <span class="underline"></span>
+        </div>
+        <div class="btn-container">
+            <button class="filter-btn" type="button" data-categ="all">all</button>
+            <button class="filter-btn" type="button" data-categ="breakfast">breakfast</button>
+            <button class="filter-btn" type="button" data-categ="lunch">lunch</button>
+            <button class="filter-btn" type="button" data-categ="shakes">shakes</button>
+        </div>
+        <div class="section-center"></div>
+    </section>
+    <template id="template">
+        <article class="product-item">
+            <img src="img-hero.png" class="product-img" alt="product item">
+            <div class="product-info">
+                <header>
+                    <h4 class="product-title"></h4>
+                    <h4 class="product-price"></h4>
+                </header>
+                <p class="product-text"></p>
+            </div>
+        </article>
+    </template>
+    <script src="main.js"></script>
+</body>
+
+</html>

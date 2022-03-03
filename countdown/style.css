@@ -1,0 +1,117 @@
+h3,
+h4,
+p {
+  margin: 0;
+}
+button,
+h3,
+h4 {
+  font-weight: 900;
+}
+.title,
+button {
+  color: #3e8e56;
+}
+.container,
+.deadline,
+main {
+  display: flex;
+}
+.container,
+.title {
+  text-transform: uppercase;
+}
+body,
+html {
+  overflow-x: hidden;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #f9fffb;
+}
+main {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px 1px #00000062;
+}
+@media screen and (max-width: 768px) {
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.section-center {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  gap: 2em;
+}
+@media screen and (max-width: 768px) {
+  .section-center {
+    flex-direction: column;
+  }
+}
+.message {
+  padding: 1em 0;
+}
+.gift-text {
+  line-height: 1.5;
+}
+.deadline {
+  margin: 2em auto 0;
+  width: 70%;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  width: 70px;
+  height: 70px;
+  background-color: #235532;
+  color: #fff;
+  border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  .deadline {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 300px) {
+  .container {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+}
+.days,
+.hours,
+.minutes,
+.seconds {
+  font-size: 42px;
+  font-family: monospace;
+}
