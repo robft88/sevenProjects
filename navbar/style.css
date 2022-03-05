@@ -62,7 +62,7 @@ main {
   position: absolute;
   top: 0;
   height: 100vh;
-  backdrop-filter: blur(10px);
+  background-color: #f9fffb;
   z-index: 99;
   transform: translateX(0%);
   transition: all 0.9s ease;
@@ -74,7 +74,6 @@ main {
   top: 0;
   width: 100%;
   height: 100vh;
-  backdrop-filter: blur(10px);
   z-index: 99;
   transform: translateX(-100%);
   transition: all 0.9s ease;
